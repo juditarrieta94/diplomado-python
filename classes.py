@@ -49,11 +49,11 @@ class ModelOutput(PydanticBaseModel):
     """
 
     cantidad_empresas: float = Field(
-        description="Probabilidad de Renuncia del empleado"
+        description="Cantidad de empresas que se registraran para esa fecha"
     )
 
     class Config:
-        schema_extra = {"example": {"cantidad_empresas": 0.42}}
+        schema_extra = {"example": {"cantidad_empresas": 22}}
 
 
 class APIModelBackEnd:
@@ -68,16 +68,16 @@ class APIModelBackEnd:
         Para más información del __init__ method, pueden leer en línea en sitios cómo
         https://www.udacity.com/blog/2021/11/__init__-in-python-an-overview.html
         Este método lo cambian según sus inputs
-        @param year: Nivel de satisfacción
-        @param month: Horas promedio trabajadas al mes
-        @param day: Nivel de salario
+        @param year: año
+        @param month: mes
+        @param day: dia
         """
         self.year = year
-        """Nivel de Satisfacción"""
+        """año"""
         self.month = month
-        """Horas promedio trabajadas al mes"""
+        """mes"""
         self.day = day
-        """Nivel de salario"""
+        """dia"""
 
         self.model= None
         """Modelo de ML cargado por el método L{_load_model}"""
