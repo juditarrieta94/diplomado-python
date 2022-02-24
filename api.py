@@ -14,7 +14,7 @@ app = FastAPI(title="API EQUIPO 2 DIPLOMADO", version="1.0.0")
 
 
 @app.post("/predict", response_model=List[ModelOutput])
-async def predict_proba(inputs: List[ModelInput]):
+async def predict(inputs: List[ModelInput]):
     """Endpoint de predicción de la API
     @param inputs: Inputs del modelo de predicción
     """
