@@ -5,7 +5,7 @@ from fastapi import FastAPI
 from typing import List
 from classes import ModelInput, ModelOutput, APIModelBackEnd
 # Creamos el objeto app
-app = FastAPI(title="API de Machine Learning del Diplomado", version="1.0.0")
+app = FastAPI(title="API EQUIPO 2 DIPLOMADO", version="1.0.0")
 '''Objeto FastAPI usado para el deployment de la API :)'''
 # Con el decorador, ponemos en el endpoint /predict la funcionalidad de la función predict_proba
 # response_model=List[ModelOuput] es que puede responder una lista de instancias válidas de ModelOutput
